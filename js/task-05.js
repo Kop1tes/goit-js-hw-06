@@ -10,6 +10,10 @@ function onInputChange(event) {
     refs.output.textContent = event.currentTarget.value;
 };
 
-
-
-
+refs.input.addEventListener('input', () => {
+    if (refs.input.value) {
+      refs.output.textContent = refs.input.value;
+    } else {
+      refs.output.textContent = "Anonymous";
+    }
+  });
